@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>false</isExposed>
+    <masterLabel>StudentTrigger</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage">
+            <objects>
+                <object>Student__c</object>
+            </objects>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
+
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>45.0</apiVersion>
+    <status>Active</status>
+    <label>StudentTrigger</label>
+    public with sharing class StudentTrigger {
+
+        private static Set<Id> studentIds = new Set<Id>();
+
+        @InvocableMethod
+        public static void updatePhoneNumber(List<Student__c> newStudents) {
+            for(Student__c s : newStudents) {
+                studentIds.add(s.Id);
+            }
+            List<Student__c> studentsToUpdate = [SELECT Id, Phone__c, Mobile__c FROM Student__c WHERE Id IN :studentIds AND (Mobile__c = null OR Mobile__c = '')];
+            for(Student__c s : studentsToUpdate) {
+                s.Mobile__c = s.Phone__c;
+            }
+            update studentsToUpdate;
+        }
+    }
+</ApexClass>
+
+<ApexTrigger xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>45.0</apiVersion>
+    <status>Active</status>
+    <label>StudentTrigger</label>
+    trigger StudentTrigger on Student__c (before insert) {
+        StudentTrigger.updatePhoneNumber(Trigger.new);
+    }
+</ApexTrigger>

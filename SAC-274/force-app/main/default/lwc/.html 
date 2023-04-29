@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Student Trigger" icon-name="custom:custom14">
+        <div class="slds-p-around_medium">
+            <p>This trigger will be created on the Student__c custom object. It will fire whenever a new record is inserted. The trigger will update the Mobile field with the phone number of the student if it is empty or null. If the Mobile field already has a value, it will not be updated. The trigger should also handle bulk insert operations, and should not cause any performance issues or errors.</p>
+        </div>
+    </lightning-card>
+</template>
