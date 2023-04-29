@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>46.0</apiVersion>
+    <status>Active</status>
+    <description>This Apex class is for creating surveys with basic information, target users, criteria fields, and question and answer sections.</description>
+    <label>Admin Survey</label>
+    <metadata>
+        <fieldsToCreate>
+            <field>Domain__c</field>
+            <field>Title__c</field>
+            <field>Description__c</field>
+            <field>Delay_Time_in_Seconds__c</field>
+            <field>Status__c</field>
+            <field>Survey_State__c</field>
+            <field>Page_Name_or_Location__c</field>
+            <field>Start_Date__c</field>
+            <field>End_Date__c</field>
+            <field>Target_Users__c</field>
+            <field>Criteria_Fields__c</field>
+            <field>Specialty__c</field>
+            <field>Preferences__c</field>
+            <field>Country__c</field>
+            <field>Region__c</field>
+            <field>City__c</field>
+            <field>Questions__c</field>
+            <field>Answer_Type__c</field>
+            <field>Range_of_Rating__c</field>
+        </fieldsToCreate>
+    </metadata>
+</ApexClass>
