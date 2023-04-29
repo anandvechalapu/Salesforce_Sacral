@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <status>Active</status>
+    <userStory>DRL- salesforce - User survey story  As a user, I want to be able to see surveys that match my criteria and have the option to skip them so that I can provide my feedback only on relevant surveys.</userStory>
+    <acceptanceCriteria>
+        <criteria>The system should match surveys to the user based on their specialty, preferences, and location (if applicable).</criteria>
+        <criteria>The system should display surveys with the "Active" status that are not yet completed or cancelled.</criteria>
+        <criteria>The system should display surveys to logged-in users only.</criteria>
+        <criteria>The system should provide a "Skip" option for users who do not wish to take a survey.</criteria>
+        <criteria>Once a user has skipped a survey, that survey will not be displayed to them again.</criteria>
+        <criteria>Once a user has taken a survey, that survey will not be displayed to them again.</criteria>
+        <criteria>The system should allow the admin to download survey reports in a downloadable format such as a CSV or Excel file.</criteria>
+    </acceptanceCriteria>
+    <definitionOfDone>
+        <definition>The system matches surveys to users based on their criteria and displays them on the user's dashboard or in a separate survey section.</definition>
+        <definition>The system only displays surveys with the "Active" status that have not yet been completed or cancelled.</definition>
+        <definition>The system verifies that the user is logged in before displaying any surveys.</definition>
+        <definition>The system provides a "Skip" button for each survey displayed to the user.</definition>
+        <definition>Once a user clicks the "Skip" button, the survey is removed from their survey list and will not be displayed to them again.</definition>
+        <definition>Once a user completes a survey, the survey is removed from their survey list and will not be displayed to them again.</definition>
+        <definition>The system allows the admin to download survey reports in a downloadable format such as a CSV or Excel file.</definition>
+    </definitionOfDone>
+</ApexClass>
