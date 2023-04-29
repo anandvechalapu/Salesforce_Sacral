@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>46.0</apiVersion>
+    <status>Active</status>
+    <userStory>As a Salesforce user, I want to be able to view account and contact details in a Lightning web component, so that I can quickly access important information.</userStory>
+    <acceptanceCriteria>When I access the Lightning web component, I should see a list of all accounts and their associated contacts.Clicking on an account should display details of that account, including its name, phone number, and address.Clicking on a contact should display details of that contact, including its name, email address, and phone number.The Lightning web component should only display accounts and contacts that are visible to the user.The information displayed in the Lightning web component should be up-to-date and accurate.</acceptanceCriteria>
+    <definitionOfDone>The Create AccountContactWrapper Apex class should be created with methods to retrieve and organize the necessary account and contact data.The Lightning web component should be designed with appropriate fields and labels to display the relevant account and contact details.The Lightning web component should be tested thoroughly to ensure that it displays the correct data for each account and contact.The Lightning web component should be integrated into the Salesforce system and made available to users.Documentation should be provided to explain how to access and use the Lightning web component.</definitionOfDone>
+</ApexClass>
