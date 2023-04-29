@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <description>Apex class to match surveys to the user based on their specialty, preferences, and location (if applicable). Provide a "Skip" option for users who do not wish to take a survey. Allow the admin to download survey reports in a downloadable format such as a CSV or Excel file.</description>
+    <status>Active</status>
+</ApexClass>
