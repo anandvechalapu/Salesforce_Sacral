@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>47.0</apiVersion>
+    <status>Active</status>
+    <userStory>As a user, I want an automatic update of the Mobile field on the Student__c custom object whenever a new Student__c record is created, so that I can easily view and manage student information.</userStory>
+    <description>Apex class for automated update of the Mobile field on the Student__c custom object.</description>
+    <acceptanceCriteria>
+        <criteria>The Mobile field on the Student__c custom object should be automatically populated with the phone number of the student when a new Student__c record is inserted.</criteria>
+        <criteria>The Mobile field should be a text field with a maximum character length of 15.</criteria>
+        <criteria>The Mobile field should be populated with the same value as the Phone field.</criteria>
+        <criteria>If the Phone field is blank, the Mobile field should also be blank.</criteria>
+    </acceptanceCriteria>
+    <definitionOfDone>An Apex class has been created for the Student__c custom object that will be the automatic update of the Mobile field.The Apex class has been thoroughly tested and debugged.The Mobile field on the Student__c custom object is properly populated with the phone number of the student whenever a new Student__c record is inserted.The Apex class has been deployed to the production environment and is functioning as expected.</definitionOfDone>
+</ApexClass>
