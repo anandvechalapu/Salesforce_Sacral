@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Trigger xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>45.0</apiVersion>
+    <description>Trigger on Student__c to update Mobile field</description>
+    <status>Active</status>
+    <triggerType>before</triggerType>
+    <content>Trigger_Student__c.trigger</content>
+    <name>Trigger_Student__c</name>
+    <object>Student__c</object>
+    <operation>insert</operation>
+</Trigger>
+
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>45.0</apiVersion>
+    <status>Active</status>
+    <isValid>true</isValid>
+    <name>Trigger_Student__c</name>
+    <body>public with sharing class Trigger_Student__c {
+        @InvocableMethod
+        public static void populateMobile(List<Student__c> newStudentList){
+            for(Student__c newStudent: newStudentList){
+                if(newStudent.Mobile__c == null || newStudent.Mobile__c == ''){
+                    newStudent.Mobile__c = newStudent.Phone__c;
+                }
+            }
+            update newStudentList;
+        }
+    }</body>
+</ApexClass>
